@@ -7,16 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  usernameOrEmail: string= '';
-  password: string= '';
+  usernameOrEmail: string = '';
+  password: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  login(){
-
+  login() {
     const users = [
-      {id: 1, username: 'usuario1', email:'usuario1@example.com', password: '123456'},
-      {id: 2, username: 'usuario2', email:'usuario2@example.com', password: 'abcdef'}
+      { id: 1, username: 'usuario1', email: 'usuario1@example.com', password: '123456' },
+      { id: 2, username: 'usuario2', email: 'usuario2@example.com', password: 'abcdef' }
     ];
 
     const user = users.find(u => u.username === this.usernameOrEmail || u.email === this.usernameOrEmail);
@@ -32,8 +31,11 @@ export class LoginPage implements OnInit {
   navigateToRegister() {
     this.router.navigate(['/register']);
   }
-  
-  ngOnInit() {
+
+  olvidasteContrasena() {
+    // Navegar a la página de recuperación de contraseña cuando se hace clic en "¿Olvidaste tu contraseña?"
+    this.router.navigate(['/forgot-password']);
   }
 
+  ngOnInit() {}
 }

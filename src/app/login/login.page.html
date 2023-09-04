@@ -1,21 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="mycolor">
-    <ion-title>Iniciar Sesion</ion-title>
+    <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-item>
-    <ion-label position="floating"></ion-label>
-    <ion-input [(ngModel)]="usernameOrEmail" type="text" label="Correo o usuario"></ion-input>
+    <ion-label position="floating">Correo o usuario</ion-label>
+    <ion-input [(ngModel)]="usernameOrEmail" type="text"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating"></ion-label>
-    <ion-input [(ngModel)]="password" type="password" label="Contraseña"></ion-input>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
   </ion-item>
   <ion-button expand="full" (click)="login()">Iniciar sesión</ion-button>
   <ion-button expand="full" color="secondary" routerLink="/register">Registrarse</ion-button>
-  <ion-button expand="full" color="medium" routerLink="/forgot-password">¿Olvidaste tu contraseña?</ion-button>
+  <p>¿Olvidaste tu contraseña? <a (click)="olvidasteContrasena()">Recuperar contraseña</a></p>
 
   <ion-header collapse="condense">
     <ion-toolbar>

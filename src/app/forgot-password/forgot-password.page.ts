@@ -15,6 +15,7 @@ export class ForgotPasswordPage implements OnInit {
     // Aquí implementa la lógica para enviar un correo de recuperación de contraseña
     // Puedes utilizar servicios, autenticación, etc.
 
+    
     // Después de enviar el correo, puedes redirigir al usuario a una página de confirmación
     this.router.navigate(['/login']);
   }
